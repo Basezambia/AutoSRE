@@ -20,9 +20,18 @@ AutoSRE/
 │       │   ├── incident_responder.py
 │       │   ├── orchestrator.py
 │       │   └── reliability_forecaster.py
+│       ├── app.py
 │       ├── cli.py
 │       ├── config.py
-│       └── models.py
+│       ├── models.py
+│       ├── schemas.py
+│       ├── service.py
+│       ├── storage.py
+│       ├── static/
+│       │   ├── app.js
+│       │   └── styles.css
+│       └── templates/
+│           └── index.html
 ├── .gitignore
 ├── pyproject.toml
 └── README.md
