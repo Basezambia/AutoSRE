@@ -1,0 +1,5 @@
+{
+  "approval_required": ["scale", "restart", "config_patch", "hotfix_pr"],
+  "risk_threshold": 0.7,
+  "shadow_pipeline_required": true
+}

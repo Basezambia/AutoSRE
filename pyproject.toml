@@ -1,0 +1,17 @@
+[project]
+name = "autosre-ai"
+version = "0.1.0"
+description = "Agentic DevOps system for CI/CD automation, incident response, and reliability engineering."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AutoSRE AI" }]
+
+[project.scripts]
+autosre-ai = "autosre_ai.cli:main"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
