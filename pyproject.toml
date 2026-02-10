@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autosre-ai"
+version = "0.2.0"
+description = "Agentic DevOps platform for CI/CD automation, incident response, and reliability engineering."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AutoSRE AI" }]
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.27.0",
+  "pydantic>=2.6.0",
+  "jinja2>=3.1.3",
+  "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+api = ["httpx>=0.26.0"]
+dev = ["pytest>=8.0.0", "httpx>=0.26.0"]
+
+[project.scripts]
+autosre-ai = "autosre_ai.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+autosre_ai = ["templates/*.html", "static/*.js", "static/*.css"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
